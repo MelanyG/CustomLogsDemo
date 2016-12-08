@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtCity;
 @property (weak, nonatomic) IBOutlet UITextField *txtZKPO;
 @property (nonatomic, strong) DBManager *dbManager;
-@property (nonatomic, strong) id<EditInfoViewControllerDelegate> delegate;
+@property (nonatomic, weak) id<EditInfoViewControllerDelegate> delegate;
 @property (nonatomic) int recordIDToEdit;
 
 - (IBAction)saveInfo:(id)sender;

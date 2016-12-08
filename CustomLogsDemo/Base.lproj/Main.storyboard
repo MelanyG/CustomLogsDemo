@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -97,11 +98,87 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tblItems" destination="JAa-p3-Z0i" id="rlg-TL-sHo"/>
+                        <segue destination="GJD-LW-8Oq" kind="show" identifier="idSegueEditItem" action="showDetailViewController:sender:" id="Kjn-DN-6UD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itn-j0-icA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237.5999999999999" y="-60.719640179910051"/>
+            <point key="canvasLocation" x="1351" y="-61"/>
+        </scene>
+        <!--Edit Item View Controller-->
+        <scene sceneID="LrR-Hb-tlL">
+            <objects>
+                <viewController id="GJD-LW-8Oq" customClass="EditItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hBq-cg-jEv"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZxL-cd-aqQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pJh-Us-bgF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYK-F4-gLC">
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.85882352939999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jkE-SM-9F9"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter quantity..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysg-QB-Ynp">
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.85882352939999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HIX-fo-3r8"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owV-fS-WC6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dwG-nh-laf"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Item" id="8nN-S6-PDw">
+                                        <barButtonItem key="backBarButtonItem" title="GoBack" id="WXC-y7-tCC"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Go Back" id="phi-yu-lxC">
+                                            <color key="tintColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="GJD-LW-8Oq" id="9GE-YJ-XBb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="RH6-jO-YTx">
+                                            <color key="tintColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="addButtonPressed:" destination="GJD-LW-8Oq" id="gwj-Bh-7Ny"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ysg-QB-Ynp" firstAttribute="top" secondItem="eYK-F4-gLC" secondAttribute="bottom" constant="65" id="4f1-gH-LN6"/>
+                            <constraint firstItem="eYK-F4-gLC" firstAttribute="top" secondItem="hBq-cg-jEv" secondAttribute="bottom" constant="100" id="6Hn-Gi-sKF"/>
+                            <constraint firstItem="ysg-QB-Ynp" firstAttribute="leading" secondItem="pJh-Us-bgF" secondAttribute="leadingMargin" id="HUl-dk-pHS"/>
+                            <constraint firstItem="owV-fS-WC6" firstAttribute="top" secondItem="pJh-Us-bgF" secondAttribute="top" constant="20" id="KrV-pD-P7d"/>
+                            <constraint firstItem="eYK-F4-gLC" firstAttribute="trailing" secondItem="pJh-Us-bgF" secondAttribute="trailingMargin" id="jap-Is-gKp"/>
+                            <constraint firstAttribute="trailing" secondItem="owV-fS-WC6" secondAttribute="trailing" id="jax-cz-5cx"/>
+                            <constraint firstItem="owV-fS-WC6" firstAttribute="leading" secondItem="pJh-Us-bgF" secondAttribute="leading" id="reC-6t-cDi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ysg-QB-Ynp" secondAttribute="trailing" id="s3S-W2-3Eo"/>
+                            <constraint firstItem="eYK-F4-gLC" firstAttribute="leading" secondItem="pJh-Us-bgF" secondAttribute="leadingMargin" id="yYx-T3-EcY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="itemName" destination="eYK-F4-gLC" id="Rmi-C5-yRE"/>
+                        <outlet property="itemQuantity" destination="ysg-QB-Ynp" id="wUm-ue-bdr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYQ-s3-kEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2215" y="-150"/>
         </scene>
         <!--Shops-->
         <scene sceneID="tne-QT-ifu">

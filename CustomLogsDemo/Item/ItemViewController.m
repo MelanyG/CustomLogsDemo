@@ -7,12 +7,14 @@
 //
 
 #import "ItemViewController.h"
-#import "DBManager.h"
+#import "EditItemViewController.h"
 
-@interface ItemViewController ()
+@interface ItemViewController () <EditItemViewControllerDelegate>
 
 @property (nonatomic, strong) DBManager *dbManager;
 @property (nonatomic, strong) NSArray *itemsArray;
+@property (assign, nonatomic) NSInteger itemIDToEdit;
+
 
 @end
 
@@ -75,6 +77,25 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    // Get the record ID of the selected name and set it to the recordIDToEdit property.
+    self.itemIDToEdit = [[[self.itemsArray objectAtIndex:indexPath.row] objectAtIndex:0] intValue];
+    
+    // Perform the segue.
+    [self performSegueWithIdentifier:@"idSegueEditItem" sender:self];
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        int recordIDToDelete = [[[self.itemsArray objectAtIndex:indexPath.row] objectAtIndex:0] intValue];
+        NSString *query = [NSString stringWithFormat:@"delete from Item where idItem=%d", recordIDToDelete];
+        
+        [self.dbManager executeQuery:query];
+        
+        [self loadData];
+    }
+}
 /*
 #pragma mark - Navigation
 
@@ -90,6 +111,21 @@
 }
 
 - (IBAction)addButtonPressed:(id)sender {
-    
+    self.itemIDToEdit = -1;
+    [self performSegueWithIdentifier:@"idSegueEditItem" sender:self];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"idSegueEditItem"]){
+        EditItemViewController *editItemViewController = [segue destinationViewController];
+        editItemViewController.itemToEdit = self.itemIDToEdit;
+        editItemViewController.shopID = self.shopID;
+        editItemViewController.delegate = self;
+    }
+}
+
+-(void)editingItemWasFinished {
+    [self loadData];
+}
+
 @end

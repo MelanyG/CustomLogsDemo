@@ -16,7 +16,6 @@
 @property (nonatomic) int recordIDToEdit;
 @property (nonatomic, strong) NSArray *arrShopsInfo;
 
-
 -(void)loadData;
 
 @end
@@ -93,7 +92,6 @@
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     // Get the record ID of the selected name and set it to the recordIDToEdit property.
     self.recordIDToEdit = [[[self.arrShopsInfo objectAtIndex:indexPath.row] objectAtIndex:2] intValue];
-    
     // Perform the segue.
     [self performSegueWithIdentifier:@"idSegueEditInfo" sender:self];
 }
@@ -106,17 +104,11 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the selected record.
-        // Find the record ID.
         int recordIDToDelete = [[[self.arrShopsInfo objectAtIndex:indexPath.row] objectAtIndex:2] intValue];
-        
-        // Prepare the query.
         NSString *query = [NSString stringWithFormat:@"delete from Shop where idShop=%d", recordIDToDelete];
-        
-        // Execute the query.
+
         [self.dbManager executeQuery:query];
-        
-        // Reload the table view.
+
         [self loadData];
     }
 }

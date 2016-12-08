@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ItemTableViewCell.h"
-
+#import "DBManager.h"
 
 @interface ItemViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property(assign, nonatomic)NSInteger shopID;
 @property (weak, nonatomic) IBOutlet UITableView *tblItems;
+@property (assign, nonatomic) NSInteger shopId;
 
 - (IBAction)backButtonPressed:(id)sender;
 - (IBAction)addButtonPressed:(id)sender;

@@ -10,17 +10,18 @@
 		3610030A1DF98E88008C8CED /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003091DF98E88008C8CED /* Item.m */; };
 		3610030D1DF98EA8008C8CED /* Shop.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610030C1DF98EA8008C8CED /* Shop.m */; };
 		3610030F1DF98F02008C8CED /* SimpleDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = 3610030E1DF98F02008C8CED /* SimpleDB.sql */; };
-		361003121DF9B541008C8CED /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003111DF9B541008C8CED /* ItemViewController.m */; };
-		361003151DF9B743008C8CED /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003141DF9B743008C8CED /* ItemTableViewCell.m */; };
+		361003281DF9ECB8008C8CED /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610031B1DF9ECB8008C8CED /* DBManager.m */; };
+		361003291DF9ECB8008C8CED /* EditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3610031E1DF9ECB8008C8CED /* EditItemViewController.m */; };
+		3610032A1DF9ECB8008C8CED /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003201DF9ECB8008C8CED /* ItemTableViewCell.m */; };
+		3610032B1DF9ECB8008C8CED /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003221DF9ECB8008C8CED /* ItemViewController.m */; };
+		3610032C1DF9ECB8008C8CED /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003251DF9ECB8008C8CED /* EditInfoViewController.m */; };
+		3610032D1DF9ECB8008C8CED /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361003271DF9ECB8008C8CED /* ShopViewController.m */; };
 		361216151DF894450075B622 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 361216141DF894450075B622 /* main.m */; };
 		361216181DF894450075B622 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 361216171DF894450075B622 /* AppDelegate.m */; };
-		3612161B1DF894450075B622 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3612161A1DF894450075B622 /* ShopViewController.m */; };
 		3612161E1DF894460075B622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3612161C1DF894460075B622 /* Main.storyboard */; };
 		361216201DF894460075B622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3612161F1DF894460075B622 /* Assets.xcassets */; };
 		361216231DF894460075B622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361216211DF894460075B622 /* LaunchScreen.storyboard */; };
 		3655C2611DF9546700437D05 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3655C2601DF9546700437D05 /* libsqlite3.tbd */; };
-		3655C2641DF9566800437D05 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3655C2631DF9566800437D05 /* DBManager.m */; };
-		3655C2691DF968EF00437D05 /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3655C2681DF968EF00437D05 /* EditInfoViewController.m */; };
 		FF1AE38FD45C1D55CE2A2EF7 /* Pods_CustomLogsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4956B6508073BCB5ED96A0C8 /* Pods_CustomLogsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,25 +32,27 @@
 		3610030B1DF98EA8008C8CED /* Shop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shop.h; sourceTree = "<group>"; };
 		3610030C1DF98EA8008C8CED /* Shop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shop.m; sourceTree = "<group>"; };
 		3610030E1DF98F02008C8CED /* SimpleDB.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleDB.sql; sourceTree = SOURCE_ROOT; };
-		361003101DF9B541008C8CED /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
-		361003111DF9B541008C8CED /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
-		361003131DF9B743008C8CED /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
-		361003141DF9B743008C8CED /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
+		3610031A1DF9ECB8008C8CED /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		3610031B1DF9ECB8008C8CED /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		3610031D1DF9ECB8008C8CED /* EditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemViewController.h; sourceTree = "<group>"; };
+		3610031E1DF9ECB8008C8CED /* EditItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemViewController.m; sourceTree = "<group>"; };
+		3610031F1DF9ECB8008C8CED /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
+		361003201DF9ECB8008C8CED /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
+		361003211DF9ECB8008C8CED /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		361003221DF9ECB8008C8CED /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		361003241DF9ECB8008C8CED /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		361003251DF9ECB8008C8CED /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
+		361003261DF9ECB8008C8CED /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		361003271DF9ECB8008C8CED /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
 		361216101DF894450075B622 /* CustomLogsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomLogsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		361216141DF894450075B622 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		361216161DF894450075B622 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		361216171DF894450075B622 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		361216191DF894450075B622 /* ShopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
-		3612161A1DF894450075B622 /* ShopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
 		3612161D1DF894460075B622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3612161F1DF894460075B622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		361216221DF894460075B622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		361216241DF894460075B622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3655C2601DF9546700437D05 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		3655C2621DF9566800437D05 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
-		3655C2631DF9566800437D05 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
-		3655C2671DF968EF00437D05 /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
-		3655C2681DF968EF00437D05 /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
 		4956B6508073BCB5ED96A0C8 /* Pods_CustomLogsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomLogsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951B689DFDCEA9A1D64D78DF /* Pods-CustomLogsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLogsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomLogsDemo/Pods-CustomLogsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +90,39 @@
 			path = DataBaseItems;
 			sourceTree = "<group>";
 		};
+		361003191DF9ECB8008C8CED /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				3610031A1DF9ECB8008C8CED /* DBManager.h */,
+				3610031B1DF9ECB8008C8CED /* DBManager.m */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		3610031C1DF9ECB8008C8CED /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				3610031D1DF9ECB8008C8CED /* EditItemViewController.h */,
+				3610031E1DF9ECB8008C8CED /* EditItemViewController.m */,
+				3610031F1DF9ECB8008C8CED /* ItemTableViewCell.h */,
+				361003201DF9ECB8008C8CED /* ItemTableViewCell.m */,
+				361003211DF9ECB8008C8CED /* ItemViewController.h */,
+				361003221DF9ECB8008C8CED /* ItemViewController.m */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		361003231DF9ECB8008C8CED /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				361003241DF9ECB8008C8CED /* EditInfoViewController.h */,
+				361003251DF9ECB8008C8CED /* EditInfoViewController.m */,
+				361003261DF9ECB8008C8CED /* ShopViewController.h */,
+				361003271DF9ECB8008C8CED /* ShopViewController.m */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
 		361216071DF894450075B622 = {
 			isa = PBXGroup;
 			children = (
@@ -108,21 +144,14 @@
 		361216121DF894450075B622 /* CustomLogsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				361003191DF9ECB8008C8CED /* DBManager */,
+				3610031C1DF9ECB8008C8CED /* Item */,
+				361003231DF9ECB8008C8CED /* Shop */,
 				3610030E1DF98F02008C8CED /* SimpleDB.sql */,
 				361003071DF98E88008C8CED /* DataBaseItems */,
-				3655C2621DF9566800437D05 /* DBManager.h */,
-				3655C2631DF9566800437D05 /* DBManager.m */,
 				361216161DF894450075B622 /* AppDelegate.h */,
 				361216171DF894450075B622 /* AppDelegate.m */,
-				361216191DF894450075B622 /* ShopViewController.h */,
-				3612161A1DF894450075B622 /* ShopViewController.m */,
 				3612161C1DF894460075B622 /* Main.storyboard */,
-				361003131DF9B743008C8CED /* ItemTableViewCell.h */,
-				361003141DF9B743008C8CED /* ItemTableViewCell.m */,
-				361003101DF9B541008C8CED /* ItemViewController.h */,
-				361003111DF9B541008C8CED /* ItemViewController.m */,
-				3655C2671DF968EF00437D05 /* EditInfoViewController.h */,
-				3655C2681DF968EF00437D05 /* EditInfoViewController.m */,
 				3612161F1DF894460075B622 /* Assets.xcassets */,
 				361216211DF894460075B622 /* LaunchScreen.storyboard */,
 				361216241DF894460075B622 /* Info.plist */,
@@ -271,15 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				361003151DF9B743008C8CED /* ItemTableViewCell.m in Sources */,
 				3610030D1DF98EA8008C8CED /* Shop.m in Sources */,
+				361003291DF9ECB8008C8CED /* EditItemViewController.m in Sources */,
 				3610030A1DF98E88008C8CED /* Item.m in Sources */,
-				3655C2691DF968EF00437D05 /* EditInfoViewController.m in Sources */,
-				3612161B1DF894450075B622 /* ShopViewController.m in Sources */,
 				361216181DF894450075B622 /* AppDelegate.m in Sources */,
-				361003121DF9B541008C8CED /* ItemViewController.m in Sources */,
+				3610032C1DF9ECB8008C8CED /* EditInfoViewController.m in Sources */,
 				361216151DF894450075B622 /* main.m in Sources */,
-				3655C2641DF9566800437D05 /* DBManager.m in Sources */,
+				3610032B1DF9ECB8008C8CED /* ItemViewController.m in Sources */,
+				3610032A1DF9ECB8008C8CED /* ItemTableViewCell.m in Sources */,
+				3610032D1DF9ECB8008C8CED /* ShopViewController.m in Sources */,
+				361003281DF9ECB8008C8CED /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
