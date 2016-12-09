@@ -1,0 +1,28 @@
+//
+//  PrefixHeaderFile.pch
+//  CustomLogsDemo
+//
+//  Created by Melaniia Hulianovych on 12/9/16.
+//  Copyright © 2016 Melany Gulianovych. All rights reserved.
+//
+
+#ifndef PrefixHeaderFile_pch
+#define PrefixHeaderFile_pch
+
+#define LOG_LEVEL_DEF ddLogLevel
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+#ifdef DEBUG
+    static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+    static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
+
+
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeaderFile_pch */

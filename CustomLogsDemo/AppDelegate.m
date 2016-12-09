@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+ 
+    [DDLog addLogger:[DDASLLogger sharedInstance] withLevel:DDLogLevelInfo];
+    [DDLog addLogger:[DDTTYLogger sharedInstance] withLevel:DDLogLevelDebug];
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [DDLog addLogger:fileLogger];
+    
     return YES;
 }
 
