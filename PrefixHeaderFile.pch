@@ -6,17 +6,19 @@
 //  Copyright © 2016 Melany Gulianovych. All rights reserved.
 //
 
+
 #ifndef PrefixHeaderFile_pch
 #define PrefixHeaderFile_pch
 
 #define LOG_LEVEL_DEF ddLogLevel
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "MyLog.h"
 
-#ifdef DEBUG
-    static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
-#else
-    static const DDLogLevel ddLogLevel = DDLogLevelWarning;
-#endif
+//#ifdef DEBUG
+//    static const int ddLogLevel = DDLogL;
+//#else
+//    static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+//#endif
 
 
 

@@ -53,6 +53,7 @@
 		361216221DF894460075B622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		361216241DF894460075B622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3655C2601DF9546700437D05 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		366808B91DFE01C90086BFEE /* MyLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLog.h; path = CustomLogsDemo/MyLog.h; sourceTree = "<group>"; };
 		39AAE7391DFAAA4000203A0C /* PrefixHeaderFile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeaderFile.pch; sourceTree = "<group>"; };
 		4956B6508073BCB5ED96A0C8 /* Pods_CustomLogsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomLogsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951B689DFDCEA9A1D64D78DF /* Pods-CustomLogsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLogsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomLogsDemo/Pods-CustomLogsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				39AAE7391DFAAA4000203A0C /* PrefixHeaderFile.pch */,
+				366808B91DFE01C90086BFEE /* MyLog.h */,
 				361216121DF894450075B622 /* CustomLogsDemo */,
 				361216111DF894450075B622 /* Products */,
 				1EB47CDF9FE6D8086D02EFC3 /* Pods */,

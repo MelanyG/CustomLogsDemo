@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "MyLog.h"
+
+extern DDLogLevel const ddLogLevel;
 
 @interface DBManager : NSObject
 

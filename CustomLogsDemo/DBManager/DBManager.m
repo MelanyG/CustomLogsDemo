@@ -9,6 +9,9 @@
 #import "DBManager.h"
 #import <sqlite3.h>
 
+const DDLogLevel ddLogLevel = LOG_LEVEL_DATABASE;
+
+
 @interface DBManager()
 
 @property (nonatomic, strong) NSString *documentsDirectory;
@@ -26,7 +29,7 @@
 -(instancetype)initWithDatabaseFilename:(NSString *)dbFilename {
     self = [super init];
     if (self) {
-
+        DDLogDataBase(@"********Creation of DataBase");
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         self.documentsDirectory = [paths objectAtIndex:0];
         
@@ -48,7 +51,7 @@
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
 
         if (error != nil) {
-           // DDLogInfo(@"%@", [error localizedDescription]);
+           DDLogDataBase(@"%@", [error localizedDescription]);
         }
     }
 }
@@ -137,13 +140,13 @@
                 }
                 else {
                     // If could not execute the query show the error message on the debugger.
-                    NSLog(@"DB Error: %s", sqlite3_errmsg(sqlite3Database));
+                    DDLogDataBase(@"DB Error: %s", sqlite3_errmsg(sqlite3Database));
                 }
             }
         }
         else {
             // In the database cannot be opened then show the error message on the debugger.
-            NSLog(@"%s", sqlite3_errmsg(sqlite3Database));
+            DDLogDataBase(@"%s", sqlite3_errmsg(sqlite3Database));
         }
         
         // Release the compiled statement from memory.
