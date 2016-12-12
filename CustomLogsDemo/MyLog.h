@@ -39,11 +39,11 @@
 
 
 #define DDLogFatal(frmt, ...)   LOG_MAYBE(NO,  ddLogLevel, LOG_FLAG_FATAL,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
-#define DDLogError(frmt, ...)   LOG_MAYBE(NO,  ddLogLevel, LOG_FLAG_ERROR,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
-#define DDLogWarn(frmt, ...)    LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_WARN,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogMyError(frmt, ...)   LOG_MAYBE(NO,  ddLogLevel, LOG_FLAG_ERROR,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogMyWarn(frmt, ...)    LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_WARN,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 #define DDLogNotice(frmt, ...)  LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_NOTICE, 0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
-#define DDLogInfo(frmt, ...)    LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_INFO,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
-#define DDLogDebug(frmt, ...)   LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_DEBUG,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogMyInfo(frmt, ...)    LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_INFO,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogMyDebug(frmt, ...)   LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_DEBUG,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 #define DDLogShop(frmt, ...)   LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_SHOP,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 #define DDLogItem(frmt, ...)   LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_ITEM,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 #define DDLogDataBase(frmt, ...)   LOG_MAYBE(YES, ddLogLevel, LOG_FLAG_DATABASE,  0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)

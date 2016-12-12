@@ -9,7 +9,7 @@
 #import "DBManager.h"
 #import <sqlite3.h>
 
-const DDLogLevel ddLogLevel = LOG_LEVEL_DATABASE;
+const DDLogLevel ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_SHOP;
 
 
 @interface DBManager()
@@ -44,11 +44,13 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_DATABASE;
 -(void)copyDatabaseIntoDocumentsDirectory{
 
     NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
+    DDLogDataBase(@"Path - %@", destinationPath);
     if (![[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
 
         NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseFilename];
         NSError *error;
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+        DDLogDataBase(@"Created File document - %@", sourcePath);
 
         if (error != nil) {
            DDLogDataBase(@"%@", [error localizedDescription]);
@@ -57,10 +59,10 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_DATABASE;
 }
 
 -(void)runQuery:(const char *)query isQueryExecutable:(BOOL)queryExecutable{
-    // Create a sqlite object.
+
     sqlite3 *sqlite3Database;
     
-    // Set the database file path.
+
     NSString *databasePath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
     
     // Initialize the results array.
@@ -170,6 +172,7 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_DATABASE;
 -(void)executeQuery:(NSString *)query{
     // Run the query and indicate that is executable.
     [self runQuery:[query UTF8String] isQueryExecutable:YES];
+    DDLogDataBase(@"Executed");
 }
 
 @end
