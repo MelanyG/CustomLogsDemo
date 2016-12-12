@@ -81,7 +81,7 @@
     
     // If the query was successfully executed then pop the view controller.
     if (self.dbManager.affectedRows != 0) {
-        DDLogItem(@"Query was executed successfully. Affected rows = %d", self.dbManager.affectedRows);
+        DDLogItem(@"Item  Query was executed successfully. Affected rows = %d", self.dbManager.affectedRows);
         
         // Inform the delegate that the editing was finished.
         [self.delegate editingItemWasFinished];
@@ -90,7 +90,7 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     else{
-        DDLogItem(@"Could not execute the query.");
+        DDLogItem(@"Item  Could not execute the query.");
     }
 
 }

@@ -11,14 +11,16 @@
 #define PrefixHeaderFile_pch
 
 #define LOG_LEVEL_DEF ddLogLevel
+
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import "MyLog.h"
 
-//#ifdef DEBUG
-//    static const int ddLogLevel = DDLogL;
-//#else
-//    static const DDLogLevel ddLogLevel = DDLogLevelWarning;
-//#endif
+
+#ifdef DEBUG
+    static const int ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_ITEM;
+#else
+    static const DDLogLevel ddLogLevel = LOG_LEVEL_WARN;
+#endif
 
 
 

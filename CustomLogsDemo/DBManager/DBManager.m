@@ -9,8 +9,6 @@
 #import "DBManager.h"
 #import <sqlite3.h>
 
-const DDLogLevel ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_SHOP;
-
 
 @interface DBManager()
 
@@ -29,7 +27,7 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_SHOP;
 -(instancetype)initWithDatabaseFilename:(NSString *)dbFilename {
     self = [super init];
     if (self) {
-        DDLogDataBase(@"********Creation of DataBase");
+        DDLogDataBase(@"DataBase ********Creation of DataBase");
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         self.documentsDirectory = [paths objectAtIndex:0];
         
@@ -44,16 +42,16 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_SHOP;
 -(void)copyDatabaseIntoDocumentsDirectory{
 
     NSString *destinationPath = [self.documentsDirectory stringByAppendingPathComponent:self.databaseFilename];
-    DDLogDataBase(@"Path - %@", destinationPath);
+    DDLogDataBase(@"DataBase Path - %@", destinationPath);
     if (![[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
 
         NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseFilename];
         NSError *error;
         [[NSFileManager defaultManager] copyItemAtPath:sourcePath toPath:destinationPath error:&error];
-        DDLogDataBase(@"Created File document - %@", sourcePath);
+        DDLogDataBase(@"DataBase Created File document - %@", sourcePath);
 
         if (error != nil) {
-           DDLogDataBase(@"%@", [error localizedDescription]);
+           DDLogDataBase(@"DataBase %@", [error localizedDescription]);
         }
     }
 }
@@ -142,13 +140,13 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_SHOP;
                 }
                 else {
                     // If could not execute the query show the error message on the debugger.
-                    DDLogDataBase(@"DB Error: %s", sqlite3_errmsg(sqlite3Database));
+                    DDLogDataBase(@"DataBase DB Error: %s", sqlite3_errmsg(sqlite3Database));
                 }
             }
         }
         else {
             // In the database cannot be opened then show the error message on the debugger.
-            DDLogDataBase(@"%s", sqlite3_errmsg(sqlite3Database));
+            DDLogDataBase(@"DataBase %s", sqlite3_errmsg(sqlite3Database));
         }
         
         // Release the compiled statement from memory.
@@ -172,7 +170,7 @@ const DDLogLevel ddLogLevel = LOG_LEVEL_WARN | LOG_LEVEL_SHOP;
 -(void)executeQuery:(NSString *)query{
     // Run the query and indicate that is executable.
     [self runQuery:[query UTF8String] isQueryExecutable:YES];
-    DDLogDataBase(@"Executed");
+    DDLogDataBase(@"DataBase Executed");
 }
 
 @end

@@ -25,11 +25,11 @@
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     DDLogDataBase(@"AppDelegate");
-//    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-//    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
-//    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-//    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
-//    [DDLog addLogger:fileLogger];
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [DDLog addLogger:fileLogger];
     DDLogMyWarn(@"Fatal");
    // DDLogError(@"Error");
    // DDLogWarn(@"Warn");
